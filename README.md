@@ -17,7 +17,9 @@ A server for a simple notes app.
 - "\`\`" for code block
 - "*" for italics
 - "**" for bold
+- "[" for link to other notes or web address
 ## Key Shortcuts
+- Press enter when inside a link to follow it
 - Alt + q - Quick switch
 - Alt + a - Search all files
 - Alt + d - Deep Search
