@@ -1,0 +1,13 @@
+#deep-search-container {
+    overflow-y: auto;
+    width: min(100%, 800px);
+    padding: 10px;
+}
+
+/*Mobile styles */
+@media (pointer: coarse) {
+      #deep-search-container {
+              padding: 0px;
+              padding-right: 5px;
+      }
+}

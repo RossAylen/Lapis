@@ -1,0 +1,130 @@
+[contenteditable='true'] {
+    outline: 0px;
+}
+
+h1.focus::before {
+    content: '# ';
+    color: rgb(75, 75, 75);
+}
+
+h2.focus::before {
+    content: '## ';
+    color: rgb(75, 75, 75);
+}
+
+h3.focus::before {
+    content: '### ';
+    color: rgb(75, 75, 75);
+}
+
+h4.focus::before {
+    content: '#### ';
+    color: rgb(75, 75, 75);
+}
+
+h5.focus::before {
+    content: '##### ';
+    color: rgb(75, 75, 75);
+}
+
+h6.focus::before {
+    content: '###### ';
+    color: rgb(75, 75, 75);
+}
+
+.note-link.focus::before {
+    content: '[';
+    color: rgb(75, 75, 75);
+}
+
+.note-link.focus::after {
+    content: ']';
+    color: rgb(75, 75, 75);
+}
+
+.note-link {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: inherit;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #118afe;
+}
+
+.code-block {
+    text-decoration: none !important;
+    font-family: monospace;
+    background-color: var(--code-block-background-color);
+    height: fit-content;
+    width: auto;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex; /*Foer some reason display flex has the best arrow key interaction behaviour*/
+	flex-direction: column; /*Column makes the before and after psudeo elements appear in the right place*/
+    width: 100%;
+}
+
+.code-block.inline-element {
+    display: inline;
+    padding: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 3px;
+}
+
+.code-block.inline-element.focus {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.code-block.focus::before {
+    content: '``';
+    white-space: pre;
+}
+
+.code-block.focus::after {
+    content: '``';
+    white-space: pre;
+}
+
+.code-block.inline-element.focus::before {
+    content: '`';
+}
+
+.code-block.inline-element.focus::after {
+    content: '`';
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+hr {
+    margin: 0;
+    border-width: 1px;
+	border-style: solid;
+    display:inline-block;
+    width: 100%;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic.focus::before, .italic.focus::after{
+	content: '*';
+}
+
+.bold.focus::before, .bold.focus::after{
+	content: '**';
+}
